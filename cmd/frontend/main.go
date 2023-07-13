@@ -12,9 +12,7 @@ import (
 func main() {
 	r := chi.NewRouter()
 
-	pagesList := pages.List
-
-	handlers.Init(r, pagesList)
+	handlers.Init(r, pages.List)
 
 	log.Fatal(http.ListenAndServe(":3000", r))
 }
